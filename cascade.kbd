@@ -1,0 +1,34 @@
+
+(defsrc
+q w e r t y u i o p \
+a s d f g h j k l ; '
+z x c v b n m , . / -    
+lctl lalt lmet esc 
+)
+
+(deflayer base
+w c d l k j / u o y ;
+r s t h v b n e a i .
+q z g m x p f ' , - \
+@ctl @alt @met @grl 
+)
+
+(deflayer qwerty
+q w e r t y u i o p [
+a s d f g h j k l ; '
+z x c v b n m , . / -    
+lctl lalt lmet @grc 
+)
+
+(defcfg
+process-unmapped-keys yes
+)
+
+(defalias
+  grl (tap-hold 200 200 esc (layer-switch qwerty))
+  grc (tap-hold 200 200 esc (layer-switch base))
+
+  ctl (multi lctl (layer-toggle qwerty))
+  met (multi lmet (layer-toggle qwerty))
+  alt (multi lalt (layer-toggle qwerty))
+)
