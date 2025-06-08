@@ -39,4 +39,5 @@ MONKEYRACER:
   LH/RH: 45.18% | 54.82%
 ```
 (analysis data taken from CMINI in AKL)
+
 msklc files (with qwerty shortcuts) included for windows users, linux and mac users should use a custom [kanata](https://github.com/jtroo/kanata) keymap. 
